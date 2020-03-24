@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import HelloComponent from './components/hello.component';
 
-function HelloMessage({ name }) {
-  return <div>Hello {name}</div>;
+class App extends React.Component {
+  render() {
+    return <div className="app">
+      <HelloComponent />
+    </div>;
+  }
 }
 
 ReactDOM.render(
-  <HelloMessage name="James" />,
+  <App />,
   document.getElementById('container'),
 );
